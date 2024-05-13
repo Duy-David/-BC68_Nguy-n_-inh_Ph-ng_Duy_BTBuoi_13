@@ -94,8 +94,8 @@ document.getElementById("tinhchuvi-dientich").onclick = function () {
   let chuVi = 0;
   let dienTich = 0;
   // processing
-  chuvi = (chieuDai+ chieuRong) * 2;
-  dientich = chieuDai * chieuRong;
+  chuVi = (chieuDai+ chieuRong) * 2;
+  dienTich = chieuDai * chieuRong;
   console.log(chuVi);
   console.log(dienTich);
   document.getElementById(
@@ -111,7 +111,7 @@ document.getElementById("tinhchuvi-dientich").onclick = function () {
 
 document.getElementById("Tongkyso").onclick = function () {
   // console.log('huhu')
-  let soCoHaiChuSo = Number(document.getElementById("soCoHaiChuSo").value).toFixed();
+  let soCoHaiChuSo = Number(document.getElementById("socohaichuso").value).toFixed();
   // output
   let tongKySo = 0;
   // processing
