@@ -6,13 +6,13 @@
 
 document.getElementById("tinhluong").onclick = function () {
   // console.log('huhu')
-  let luongnhanvienmotngay = document.getElementById("luongnhanvien").value * 1;
-  let songaylam = document.getElementById("songaylamviec").value * 1;
+  let luongNhanVienMotNgay = document.getElementById("luongnhanvien").value * 1;
+  let soNgayLam = document.getElementById("songaylamviec").value * 1;
   // output
-  let tinhluong = 0;
+  let tinhLuong = 0;
   // processing
-  luongnhanvienmotngay = 100000;
-  tinhluong = songaylam * luongnhanvienmotngay;
+  luongNhanVienMotNgay = 100000;
+  tinhLuong = soNgayLam * luongNhanVienMotNgay;
 
   // console.log(luongnhanvienmotngay)
 
@@ -20,7 +20,7 @@ document.getElementById("tinhluong").onclick = function () {
 
   document.getElementById(
     "result-b1"
-  ).innerHTML = ` Tiền lương của nhân viên: ${tinhluong.toLocaleString("vn", {
+  ).innerHTML = ` Tiền lương của nhân viên: ${tinhLuong.toLocaleString("vn", {
     style: "currency",
     currency: "VND",
   })}`;
@@ -41,16 +41,16 @@ document.getElementById("tinhtrungbinh").onclick = function () {
   let num4 = document.getElementById("Sothubon").value * 1;
   let num5 = document.getElementById("Sothunam").value * 1;
   // output
-  let trungbinhsothuc = 0;
+  let trungBinhSoThuc = 0;
   // processing
-  trungbinhsothuc = (num1 + num2 + num3 + num4 + num5) / 5;
+  trungBinhSoThuc = (num1 + num2 + num3 + num4 + num5) / 5;
   // console.log(luongnhanvienmotngay)
 
   // console.log(tinhluong)
 
   document.getElementById(
     "result-b2"
-  ).innerHTML = ` Trung bình 5 số thực lần lượt ${num1}, ${num2}, ${num3}, ${num4}, ${num5} : ${trungbinhsothuc}`;
+  ).innerHTML = ` Trung bình 5 số thực lần lượt ${num1}, ${num2}, ${num3}, ${num4}, ${num5} : ${trungBinhSoThuc}`;
 };
 
 //BT3:Tính Quy đổi USd thành VNĐ biết tỷ giá hiện tại là 23500/1USD
@@ -88,19 +88,19 @@ document.getElementById("Quydoi").onclick = function () {
 
 document.getElementById("tinhchuvi-dientich").onclick = function () {
   // console.log('huhu')
-  let chieudai = document.getElementById("Chieudai").value * 1;
-  let chieurong = document.getElementById("Chieurong").value * 1;
+  let chieuDai = document.getElementById("Chieudai").value * 1;
+  let chieuRong = document.getElementById("Chieurong").value * 1;
   // output
-  let chuvi = 0;
-  let dientich = 0;
+  let chuVi = 0;
+  let dienTich = 0;
   // processing
-  chuvi = (chieudai + chieurong) * 2;
-  dientich = chieudai * chieurong;
-  console.log(chuvi);
-  console.log(dientich);
+  chuvi = (chieuDai+ chieuRong) * 2;
+  dientich = chieuDai * chieuRong;
+  console.log(chuVi);
+  console.log(dienTich);
   document.getElementById(
     "result-b4"
-  ).innerHTML = `Với hình chủ nhật có chiều dài:${chieudai}, chiều rộng ${chieurong}, thì nhận được chu vi: ${chuvi} và diện tích: ${dientich}`;
+  ).innerHTML = `Với hình chủ nhật có chiều dài:${chieuDai}, chiều rộng ${chieuRong}, thì nhận được chu vi: ${chuVi} và diện tích: ${dienTich}`;
 };
 
 //BT5: Tính tổng ký số của số có 2 chữ số bất kỳ
@@ -111,26 +111,26 @@ document.getElementById("tinhchuvi-dientich").onclick = function () {
 
 document.getElementById("Tongkyso").onclick = function () {
   // console.log('huhu')
-  let socohaichuso = Number(document.getElementById("socohaichuso").value).toFixed();
+  let soCoHaiChuSo = Number(document.getElementById("soCoHaiChuSo").value).toFixed();
   // output
-  let tongkyso = 0;
+  let tongKySo = 0;
   // processing
 
-  if ((10 <= socohaichuso) & (socohaichuso <= 99)) {
+  if ((10 <= soCoHaiChuSo) & (soCoHaiChuSo <= 99)) {
     
-    let sohangchuc = (socohaichuso - (socohaichuso % 10)) / 10;
-    let sohangdonvi = socohaichuso % 10;
+    let soHangChuc = (soCoHaiChuSo - (soCoHaiChuSo % 10)) / 10;
+    let soHangDonVi = soCoHaiChuSo % 10;
 
-    tongkyso = sohangchuc + sohangdonvi;
+    tongKySo = soHangChuc + soHangDonVi;
     document.getElementById(
       "result-b5"
-    ).innerHTML = `Với chữ số có 2 chữ số là ${socohaichuso}, ta có tổng 2 ký số là: ${tongkyso}`;
+    ).innerHTML = `Với chữ số có 2 chữ số là ${soCoHaiChuSo}, ta có tổng 2 ký số là: ${tongKySo}`;
   } else {
-    let notnum ='Số '+ socohaichuso +'Không phải số nguyên dương có 2 chữ số'
-   tongkyso= notnum
+    let notNum ='Số '+ soCoHaiChuSo +'Không phải số nguyên dương có 2 chữ số'
+    tongKySo= notNum
     document.getElementById(
       "result-b5"
-    ).innerHTML = `số ${socohaichuso} Không phải số nguyên dương có 2 chữ số`;
-    console.log(tongkyso);
+    ).innerHTML = `số ${soCoHaiChuSo} Không phải số nguyên dương có 2 chữ số`;
+    console.log(tongKySo);
   }
 };
